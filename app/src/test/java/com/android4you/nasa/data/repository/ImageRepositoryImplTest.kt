@@ -28,10 +28,6 @@ class ImageRepositoryImplTest {
         mainRepository = ImageRepositoryImpl(apiService)
     }
 
-    @After
-    fun tearDown() {
-    }
-
     @Test
     fun test_get_all_images_from_service_successfully() {
         val expectedResponse = testModelsGenerator.getImageListResponse()
