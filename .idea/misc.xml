@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.148" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16979166666666667" />
         <entry key="app/src/main/res/layout/fragment_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_grid.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_pager_item.xml" value="0.223731884057971" />
         <entry key="app/src/main/res/layout/item_grid_image.xml" value="0.223731884057971" />
       </map>
     </option>

@@ -15,7 +15,7 @@ class ImageGridAdapter : ListAdapter<ImageModelItem, RecyclerView.ViewHolder>(DI
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val workout = getItem(position)
         if (holder is ImageGridViewHolder)
-            holder.bind(workout)
+            holder.bind(workout, position)
     }
 
     companion object {

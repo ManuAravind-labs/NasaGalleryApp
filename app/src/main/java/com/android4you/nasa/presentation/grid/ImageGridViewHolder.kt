@@ -12,19 +12,19 @@ import com.android4you.nasa.domain.model.ImageModelItem
 class ImageGridViewHolder(private val binding: ItemGridImageBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(item: ImageModelItem, index : Int) {
+    fun bind(item: ImageModelItem, index: Int) {
         binding.apply {
             model = item
             executePendingBindings()
         }
         val bundle = Bundle()
         bundle.putInt("INDEX", index)
-        binding.imageView.setOnClickListener {
+        binding.imageView.setOnClickListener(
             Navigation.createNavigateOnClickListener(
                 R.id.action_imageGridFragment_to_imageDetailFragment,
                 bundle
             )
-        }
+        )
     }
 
     companion object {

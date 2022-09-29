@@ -9,7 +9,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
+import com.android4you.nasa.R
 import com.android4you.nasa.databinding.FragmentGridBinding
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -45,8 +47,10 @@ class ImageGridFragment : Fragment() {
         when (state) {
             is ImageViewState.Empty -> Unit
             is ImageViewState.Error -> {
+                _binding?.progressBar?.visibility = View.GONE
             }
             is ImageViewState.Success -> {
+                _binding?.progressBar?.visibility = View.GONE
                 val listAdapter = ImageGridAdapter()
                 _binding?.imageList?.adapter = listAdapter
                 _binding?.imageList?.layoutManager =
@@ -54,6 +58,7 @@ class ImageGridFragment : Fragment() {
                 listAdapter.submitList(state.list)
             }
             is ImageViewState.Loading -> {
+                _binding?.progressBar?.visibility = View.VISIBLE
             }
         }
     }
