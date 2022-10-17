@@ -7,7 +7,6 @@ import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
-import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -30,7 +29,7 @@ class ImageRepositoryImplTest {
 
     @Test
     fun test_get_all_images_from_service_successfully() {
-        val expectedResponse = testModelsGenerator.getImageListResponse()
+        val expectedResponse = testModelsGenerator.getImageListResponse().reversed()
 
         coEvery {
             apiService.getAllImages()

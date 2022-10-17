@@ -18,7 +18,7 @@ class TestDataGenerator {
     }
 
     fun getImageListEmptyResponse(): List<ImageModelItem> {
-        return imageList
+        return emptyList()
     }
 
     /**
